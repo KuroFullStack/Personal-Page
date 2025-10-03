@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="topnav container">
+    <div class="brand">My Portfolio</div>
+    <div class="navlinks">
+      <a class="navitem" href="index.html">Home</a>
+      <a class="navitem" href="about.html">About</a>
+      <a class="navitem" href="contact.html">Contact</a>
+      <a class="navitem" href="resume/index.html">My Resume</a>
+    </div>
+  </header>
+
+  <main class="container card">
+    <h1>Contact Me</h1>
+    <p>If you'd like to get in touch, send me a message.</p>
+    <form class="contact-form" action="#" method="post" novalidate>
+      <div class="contact-grid">
+        <label for="name">Name
+          <input id="name" name="name" type="text" placeholder="Your name">
+        </label>
+        <label for="email">Email
+          <input id="email" name="email" type="email" placeholder="you@example.com">
+        </label>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label for="subject">Subject
+          <input id="subject" name="subject" type="text" placeholder="Subject">
+        </label>
+        <label for="message">Message
+          <textarea id="message" name="message" rows="6" placeholder="Write your message..."></textarea>
+        </label>
+      </div>
+      <div class="contact-actions">
+        <button class="primary" type="submit">Send Message</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="card">
+      <div class="socials">
+        <a href="https://github.com/KuroFullStack" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/abir-hossain-871210205/" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:abirh1198@gmail.com">abirh1198@gmail.com</a>
+      </div>
+    </div>
+    <div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

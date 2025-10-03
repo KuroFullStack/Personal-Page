@@ -1,0 +1,221 @@
+/* Main portfolio styles - typography & theme */
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --accent: #7dd3fc;
+  --muted: #94a3b8;
+  --glass: rgba(255, 255, 255, 0.03);
+  --radius: 12px;
+  --maxw: 1000px;
+  --gap: 18px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+
+
+/* Container */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  background: transparent;
+  padding: 20px
+}
+
+/* Top navbar */
+.topnav {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--glass);
+  padding: 10px 16px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+  margin-bottom: 16px;
+  backdrop-filter: blur(6px);
+}
+
+.topnav .brand {
+  font-weight: 700;
+  letter-spacing: 0.6px
+}
+
+.topnav .navlinks {
+  display: flex;
+  gap: 12px;
+  align-items: center
+}
+
+.topnav .navlinks .navitem {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+
+.topnav .navlinks .navitem:hover {
+  transform: translateY(-3px);
+  background: rgba(125, 211, 252, 0.08);
+  color: var(--accent);
+}
+
+/* Blog navbar (from assignment 4) */
+.blognav {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px
+}
+
+/* Card */
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6)
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 30px;
+  padding: 18px;
+  border-radius: 12px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted)
+}
+
+.site-footer .socials {
+  display: flex;
+  gap: 10px;
+  align-items: center
+}
+
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600
+}
+
+.site-footer small {
+  color: var(--muted)
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px
+}
+
+.contact-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.95em
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: transparent;
+  color: inherit;
+  outline: none;
+  font-size: 1em;
+  transition: box-shadow .18s ease, transform .12s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  box-shadow: 0 6px 20px rgba(125, 211, 252, 0.08);
+  transform: translateY(-2px);
+  border-color: rgba(125, 211, 252, 0.22);
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: flex-end
+}
+
+button.primary {
+  background: var(--accent);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #022;
+}
+
+/* Responsive */
+@media (max-width:600px) {
+  .contact-grid {
+    grid-template-columns: 1fr
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start
+  }
+}
+
+/* Utilities */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Simple typography */
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 8px
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+  color: var(--accent)
+}
+
+/* make images look nice */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px
+}
+
+
+body {
+  background: linear-gradient(to bottom right, #b3d9ff, #e6f2ff);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
